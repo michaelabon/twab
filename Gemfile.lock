@@ -1,16 +1,27 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    atom-tools (2.0.5)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
+    rack (2.2.3)
+    rack-protection (2.1.0)
+      rack
+    ruby2_keywords (0.0.5)
     simple-rss (1.3.3)
+    sinatra (2.1.0)
+      mustermann (~> 1.0)
+      rack (~> 2.2)
+      rack-protection (= 2.1.0)
+      tilt (~> 2.0)
+    tilt (2.0.10)
 
 PLATFORMS
   x86_64-darwin-20
   x86_64-linux
 
 DEPENDENCIES
-  atom-tools
   simple-rss
+  sinatra
 
 RUBY VERSION
    ruby 3.0.2p107
