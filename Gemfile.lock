@@ -1,0 +1,15 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    atom-tools (2.0.5)
+    simple-rss (1.3.3)
+
+PLATFORMS
+  x86_64-darwin-20
+
+DEPENDENCIES
+  atom-tools
+  simple-rss
+
+BUNDLED WITH
+   2.2.22
