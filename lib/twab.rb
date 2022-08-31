@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def find_twab
   url = 'https://www.bungie.net/en/Rss/NewsByCategory'
 
@@ -5,15 +7,21 @@ def find_twab
 
   first_twab = f.entries.find { |e| e.title.match(/This Week At Bungie/i) }
 
-  if !first_twab
-    raise NoTwabFoundError.new
-  end
+  raise NoTwabFoundError unless first_twab
 
-  return first_twab.link
+  redirect_url = URI.parse(first_twab.link)
+
+  fix_relative_url redirect_url
+end
+
+def fix_relative_url(url)
+  return url unless url.relative?
+
+  URI::HTTPS.build(host: 'www.bungie.net', path: url.path)
 end
 
 class NoTwabFoundError < StandardError
-  def initialize(msg="No TWAB found")
+  def initialize(msg = 'No TWAB found')
     super(msg)
   end
 end

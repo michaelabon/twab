@@ -1,11 +1,15 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-ruby '3.0.2'
+ruby '3.0.4'
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
+gem 'puma'
 gem 'simple-rss'
 gem 'sinatra'
-gem 'puma'
+
+group :development do
+  gem 'rubocop'
+end
