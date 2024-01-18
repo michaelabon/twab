@@ -5,7 +5,7 @@ def find_twab
 
   f = SimpleRSS.parse(URI.open(url))
 
-  first_twab = f.entries.find { |e| e.title.match(/This Week At Bungie/i) }
+  first_twab = f.entries.find { |e| e.title.match(/This Week (?:At Bungie|In Destiny)/i) }
 
   raise NoTwabFoundError unless first_twab
 
