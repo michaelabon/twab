@@ -9,6 +9,10 @@ require_relative './twab'
 get '/' do
   first_twab = find_twab
 
+  if params[:test]
+    return "Found #{first_twab}"
+  end
+
   redirect first_twab
 rescue StandardError => e
   return e.message
