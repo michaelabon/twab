@@ -13,6 +13,8 @@ updates:
     allow:
       -
         "dependency-type": "all"
+    assignees:
+      - "michaelabon"
     labels:
       - "dependencies"
     groups:
