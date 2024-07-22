@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require 'rackup'
 require 'sinatra'
 require 'simple-rss'
 require 'open-uri'
