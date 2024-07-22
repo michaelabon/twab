@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 def find_twab
-  url = 'https://www.bungie.net/en/Rss/NewsByCategory'
-
-  f = SimpleRSS.parse(URI.open(url))
+  f = SimpleRSS.parse(URI.open('https://www.bungie.net/en/Rss/NewsByCategory'))
 
   first_twab = f.entries.find { |e| e.title.match(/This Week (?:At Bungie|In Destiny)/i) }
 
@@ -20,6 +18,7 @@ def fix_relative_url(url)
   URI::HTTPS.build(host: 'www.bungie.net', path: url.path)
 end
 
+## NoTwabFoundError is used to print out a specific error message to the user
 class NoTwabFoundError < StandardError
   def initialize(msg = 'No TWAB found')
     super(msg)
