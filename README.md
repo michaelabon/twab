@@ -14,31 +14,6 @@ ruby lib/app.rb
 
 ## How to deploy
 
-### Install the Heroku CLI
+This deploys with [Fly.io](https://fly.io/apps/twab), upon a successful merge to `main`.
 
-Download and install [the Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line).
-
-If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
-
-```
-heroku login
-```
-
-### Clone the repository
-
-Use Git to clone twab's source code to your local machine.
-
-```
-heroku git:clone -a twab
-cd twab
-```
-
-### Deploy your changes
-
-Make some changes to the code you just cloned and deploy them to Heroku using Git.
-
-```
-git add .
-git commit -am 'make it better'
-git push heroku main
-```
+[GitHub has a copy](https://github.com/michaelabon/twab/settings/secrets/actions) of a Fly.io API token that may need to be regenerated.
