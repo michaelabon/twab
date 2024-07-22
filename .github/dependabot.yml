@@ -15,6 +15,11 @@ updates:
         "dependency-type": "all"
     labels:
       - "dependencies"
+    groups:
+      rubocop:
+        applies-to: "version-updates"
+        patterns:
+          - "rubocop*"
   -
     package-ecosystem: "github-actions"
     directory: "/"
