@@ -9,7 +9,7 @@ GEM
       ruby2_keywords (~> 0.0.1)
     nio4r (2.7.3)
     parallel (1.25.1)
-    parser (3.3.4.0)
+    parser (3.3.4.2)
       ast (~> 2.4.1)
       racc
     puma (6.4.2)
