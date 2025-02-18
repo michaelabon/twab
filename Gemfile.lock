@@ -69,7 +69,7 @@ DEPENDENCIES
   sinatra
 
 RUBY VERSION
-   ruby 3.3.6p108
+   ruby 3.4.2p28
 
 BUNDLED WITH
-   2.5.16
+   2.6.4
