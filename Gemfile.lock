@@ -14,7 +14,7 @@ GEM
     parser (3.3.10.0)
       ast (~> 2.4.1)
       racc
-    prism (1.5.2)
+    prism (1.6.0)
     puma (7.1.0)
       nio4r (~> 2.0)
     racc (1.8.1)
